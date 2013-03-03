@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/jingang.do" location="50,50" dimension="244,104" />
+  <StrutsActivity path="/paijian.do" location="950,50" dimension="236,104" />
+  <StrutsActivity path="/prePaiJian.do" location="650,250" dimension="257,104" />
+  <StrutsActivity path="/qianshou.do" location="270,420" dimension="254,104" />
+  <StrutsActivity path="/query.do" location="650,450" dimension="234,104" />
+  <StrutsActivity path="/index.jsp" location="650,50" dimension="88,53" />
+  <StrutsActivity path="/paijian.jsp" location="350,150" dimension="95,53" />
+  <StrutsActivity path="/form/prePaiJian.jsp" location="50,350" dimension="149,53" />
+  <StrutsActivity path="/qianshou.jsp" location="50,550" dimension="110,53" />
+  <StrutsActivity path="/query.jsp" location="350,650" dimension="90,53" />
+  <StrutsActivity path="/form/qianshou.jsp" location="950,450" dimension="143,53" />
+  <StrutsActivity path="/employee.do" location="650,650" dimension="256,104" />
+  <StrutsActivity path="/employee.jsp" location="50,750" dimension="114,53" />
+  <StrutsTransition id="/employee.jsp,null,/employee.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="107,750" />
+      <AbsolutePoint location="107,718" />
+      <AbsolutePoint location="650,718" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/query.do,success,/query.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="767,554" />
+      <AbsolutePoint location="767,569" />
+      <AbsolutePoint location="395,569" />
+      <AbsolutePoint location="395,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/prePaiJian.jsp,null,/prePaiJian.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="124,350" />
+      <AbsolutePoint location="124,332" />
+      <AbsolutePoint location="650,332" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/query.jsp,null,/query.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="365,650" />
+      <AbsolutePoint location="365,539" />
+      <AbsolutePoint location="650,539" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/qianshou.jsp,null,/qianshou.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="105,550" />
+      <AbsolutePoint location="105,472" />
+      <AbsolutePoint location="270,472" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paijian.jsp,null,/paijian.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="445,176" />
+      <AbsolutePoint location="1068,176" />
+      <AbsolutePoint location="1068,154" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/prePaiJian.do,success,/paijian.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,302" />
+      <AbsolutePoint location="397,302" />
+      <AbsolutePoint location="397,203" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.jsp,null,/jingang.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,76" />
+      <AbsolutePoint location="294,76" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee.do,success,/employee.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="778,754" />
+      <AbsolutePoint location="778,776" />
+      <AbsolutePoint location="164,776" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

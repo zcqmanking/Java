@@ -1,0 +1,159 @@
+package com.zhaocq.algorithm;
+
+public class Algorithms {
+
+	/**
+	 * 冒泡排序
+	 * 
+	 * @param a
+	 *            待排序数组
+	 */
+	public void burbleSort(int[] a) {
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i; j < a.length; j++) {
+				// 把最小的放在最前面
+				if (a[i] > a[j]) {
+					int temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+		// 打印结果
+		print(a);
+	}
+
+	/**
+	 * 打印数组元素，把每个元素顺序打印出来，元素之间用空格隔开。
+	 * 
+	 * @param a
+	 *            待打印数组
+	 */
+	private void print(int[] a) {
+		for (int i = 0; i < a.length; i++) {
+			System.out.print(a[i] + " ");
+		}
+		System.out.println("");
+	}
+
+	/**
+	 * 选择排序。 <br />
+	 * 原理：遍历数组，把当前元素视为最小元素，把该元素与其后的元素作比较，如有更小的，就交换元素。
+	 * 
+	 * @param a
+	 *            待排序数组
+	 */
+	public void chooseSort(int[] a) {
+
+		for (int i = 0; i < a.length; i++) {
+			int min = i;
+			for (int j = i + 1; j < a.length; j++) {
+				if (a[j] < a[min]) {
+					min = j;
+				}
+			}
+			if (min != i) {
+				int temp = a[min];
+				a[min] = a[i];
+				a[i] = temp;
+			}
+		}
+		// 打印结果
+		print(a);
+	}
+
+	/**
+	 * 插入排序。<br />
+	 * 原理：前半部分是已排序的数组，遍历后半部分，把每一个元素同之前的每一个元素比较，如果前面的大，就交换值。
+	 * 
+	 * @param a
+	 *            待排序数组
+	 */
+	public void insertSort(int[] a) {
+		for (int i = 1; i < a.length; i++) {
+			int j;
+			int t = a[i]; // 暂存待插入的元素
+			for (j = i; j > 0 && a[j - 1] > t; j--) {
+				a[j] = a[j - 1];
+			}
+			a[j] = t; // 由于最后有一步j--操作，所有此处应该是a[j]，而不是a[j-1]
+		}
+		print(a);
+	}
+
+	/**
+	 * 快速排序。<br />
+	 * 原理：<br />
+	 * 1.先从数列中取出一个数作为基准数。<br />
+	 * 2.分区过程，将比这个数大的数全放到它的右边，小于或等于它的数全放到它的左边。<br />
+	 * 3.再对左右区间重复第二步，直到各区间只有一个数。
+	 * 
+	 * @param a
+	 *            待排序数组
+	 */
+	public void quickSort(int[] a) {
+		int start = 0, end = a.length - 1;
+		quickSort1(a, start, end);
+	}
+
+	/**
+	 * 分治进行排序。递归调用，把数组一分为二，进行排序。
+	 * 
+	 * @param a
+	 *            待排序数组
+	 * @param start
+	 *            起始位置
+	 * @param end
+	 *            结束位置
+	 */
+	private void quickSort1(int[] a, int start, int end) {
+		if (start < end) {
+			// 先进行排序，把大于key值的元素放到右边，小于key值的元素放到左边，返回最终key所在的位置
+			int keyPos = adjustArray(a, start, end);
+			// 将数组一分为二，分别递归排序
+			quickSort1(a, start, keyPos - 1);
+			//由于数组作为参数是引用传递，所以此处再次作为参数，就是上面执行完毕后的数组。
+			quickSort1(a, keyPos + 1, end);
+		}
+		//打印结果
+		print(a);
+	}
+
+	/**
+	 * 把大于key值的元素放到右边，小于key值的元素放到左边，返回最终key所在的位置。
+	 * 
+	 * @param a
+	 *            待排序数组
+	 * @param start
+	 *            起始位置
+	 * @param end
+	 *            结束位置
+	 * @return key所在位置
+	 */
+	private int adjustArray(int[] a, int start, int end) {
+		int i = start, j = end;
+		int key = a[i]; // 取第一个元素为关键key值。
+		while (i < j) {
+			// 从右边取第一个小于key值的元素，填充到左边
+			while (i < j && a[j] >= key) {
+				j--;
+			}
+			if (i < j) { // 多加一层判断，防止意外
+				a[i] = a[j];
+				i++; // 填充后，把i指向后面元素
+			}
+			// 从左边找第一个大于key值的元素，填充到右边
+			while (i < j && a[i] < key) {
+				i++;
+			}
+			if (i < j) { // 多加一层判断，防止意外
+				a[j] = a[i];
+				j--; // 填充后，把j指向后面元素
+			}
+		}
+		// 最后把空出来的位置填上key值
+		a[i] = key;
+
+		return i;
+	}
+}

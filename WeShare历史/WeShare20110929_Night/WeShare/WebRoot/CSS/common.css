@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+.commentBody{
+	vertical-align: top;
+	margin-top: 3px;
+	background-color: #4B817E;
+	display: block;
+	padding-left: 2px;
+}
+
+.commentBox{
+	display: block;
+	float: none;
+	text-align: left;
+}
+
+.commentAuthor,.commentTime{
+	font-size: 11px;
+}
+
+.commentAuthor{
+	margin-right: 5px;
+}
+
+.sendCommentBar{
+	background-color: #4B817E;
+	padding: 3px 5px;
+	text-align: center;
+}
+
+.commentBar{
+	overflow: hidden;
+}
+
+.shareComments{
+	display: none;
+}
+
+.commentSubmitBtn{
+	margin-top: 3px;
+}
+
+.commentList{
+	
+}
+
+.commentList table{
+	width: 100%;
+	border: 0;
+}
+
+.commentSubmitBtn{
+	text-align: right;
+	width: 100%;
+}
+
+.cArea{
+	display: inline;
+}
+
+.commentUserPic{
+	float: left;
+	margin-right: 6px;
+	height: 30px;
+	width: 30px;
+}
+
+.copyRight {
+	margin-top: 20px;
+	text-align: center;
+	border-top: #9999CC 1px dashed;
+	padding-top: 5px;
+	font-size: 12px;
+}
+
+.commentDel{
+	width: 15px;
+	height: 20px;
+	float: right;
+	cursor: pointer;
+	background-image: url(../Images/allBtn.png);
+	background-repeat: no-repeat;
+	background-position: 0px -139px;
+	text-decoration: none;
+	font-size: 1px;
+	display: none;
+}

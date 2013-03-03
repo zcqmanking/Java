@@ -1,0 +1,198 @@
+@CHARSET "UTF-8";
+body {
+	text-align: center;
+	font-family: "微软雅黑", "宋体", "楷体", "华文楷体", "华文宋体";
+	background-image: url(../Images/bg.jpg);
+	background-position: center;
+	background-repeat: repeat;
+	margin-top: 0;
+}
+.body {
+	width: 1000px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.head {
+	width: 100%;
+	text-align: left;
+	font-size: 12px;
+	margin-bottom: 0;
+	padding-left: 200px;
+	padding-top: 140px;
+	height: 167px;
+	background-image: url(../Images/title.jpg);
+}
+ul {
+	display: inline;
+	font-size: 16px;
+	background-image: url(Images/bg_navg.jpg);
+}
+li {
+	display: inline;
+}
+li.cur {
+	font-weight: bold;
+}
+li.line {
+	color: #743D3B;
+}
+.spanLink {
+	cursor: pointer;
+}
+.map {
+	height: 400px;
+	width: 400px;
+	border: #000000 1px double;
+}
+.searchForm {
+	display: inline;
+}
+.search {
+	display: inline;
+	margin-left: 100px;
+	margin-right: 20px;
+}
+
+.activeCount{
+	margin-top: 20px;
+	padding-left: 10px;
+	text-align: left;
+	border: #000000 1px solid;
+}
+
+.favLocation{
+	padding-left: 10px;
+	margin-top: 10px;
+	text-align: left;
+	border: #000000 1px solid;
+}
+
+.favTitle{
+	border-bottom:  #000000 1px solid;
+}
+
+.favList{
+	margin-left: 10px;
+}
+
+.map{
+	width: 400px;
+	height: 400px;
+}
+
+.copyRight{
+	margin-top: 20px;
+	text-align: center;
+	border-top: #9999CC 1px dashed;
+	padding-top: 5px;
+	font-size: 12px;
+}
+
+.personalInfo{
+	text-align: left;
+	border: #000000 1px solid;
+}
+
+.submitList,.joinList,.viewList{
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+.sListTitle,.jListTitle,.vListTitle{
+	border-bottom: #000000 2px solid;
+}
+
+.listDiv{
+	border: #000000 1px solid;
+	padding-bottom: 10px;
+	margin-right: 1px;
+}
+
+.clickSpan{
+	text-decoration: underline;
+	display: block;
+	font-size: 14px;
+}
+
+.sList{
+	margin-left: 10px;
+}
+
+.cntlist,.submitTime{
+	font-size: 12px;
+}
+
+.cntList{
+	margin-left: 10px;
+}
+
+.cnt{
+	margin-left: 5px;
+	text-decoration: underline;
+	color: #0000FF;
+}
+
+.oneSubmit{
+	margin-bottom: 10px;
+}
+
+.more{
+	float: right;
+	font-size: 12px;
+}
+
+.feetLine,.log{
+	margin-top: 10px;
+	text-align: left;
+}
+
+.lineTitle,.logTitle{
+	width: 100%;
+	padding-left: 30px;
+	border: #000000 1px solid;
+}
+
+.footPic{
+	width: 65px;
+	height: 65px;
+	cursor: pointer;
+}
+
+.activeStartTime,.activeLocation{
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.guidePic,.onePic{
+	padding-top: 10px;
+	padding-left: 20px;
+	font-size: 14px;
+}
+
+.logList{
+	padding-left: 10px;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.logTitleTxt{
+	margin-left: 5px;
+}
+
+.oneLog{
+	margin-bottom: 6px;
+	padding-left: 10px;
+}
+
+.oneFav{
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+.favTip{
+	font-size: 14px;
+	margin-top: 5px;
+}

@@ -1,0 +1,372 @@
+@CHARSET "UTF-8";
+
+.ads {
+	height: 59px;
+	vertical-align: middle;
+	text-align: left;
+	font-size: 18px;
+/*	border: #000000 1px groove;*/
+	background-image: url(../Images/ads.png);
+}
+
+.sign {
+	text-align: left;
+	font-size: 16px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.activeSubmit {
+	text-align: left;
+	border: #000000 1px double;
+	margin-left: 0;
+}
+
+.currentActive {
+	text-align: left;
+	/*border: #000000 1px double;*/
+	background-image: url(../Images/curActiveBg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 120px;
+}
+
+.currentActiveText,.currentActiveDetail {
+	font-size: 18px;
+}
+
+.currentActiveInfo {
+	font-size: 12px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.currentActiveJoinCnt, .currentActiveViewCnt, .currentActiveComtCnt {
+	color: #FF0000;
+	cursor: pointer;
+}
+
+.tip {
+	font-size: 12px;
+	color: #666666;
+	padding-left: 10px;
+}
+
+.activeType {
+	margin-left: 0;
+}
+
+.activeBtn{
+	background-image: url(../Images/activeBtn.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 96px;
+	height: 34px;
+}
+
+.yuluBtn{
+	background-image: url(../Images/yuluBtn.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 96px;
+	height: 34px;
+}
+
+.currentActiveAll {
+	margin: 10px;
+}
+
+.addActiveDiv {
+	/*margin-top: 10px;*/
+/*	margin-bottom: 10px;*/
+	text-align: left;
+	/*border: #000000 1px double;*/
+	background-image: url(../Images/addBg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#addActiveForm{
+	margin: 0px;
+}
+
+.activeDetail {
+	overflow: hidden;
+}
+
+.activeTools {
+	margin-top: 0px;
+}
+
+.activeTools ul {
+	font-size: 14px;
+	border: #000000 1px double;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-left: 10px;
+	display: inline;
+	float: left;
+}
+
+.spanLink {
+	cursor: pointer;
+}
+
+.clickDisable {
+	color: #666666;
+	cursor: default;
+}
+
+.fLDiv input {
+	border: 0;
+	border-bottom: #000000 1px double;
+}
+
+.favLocationTip {
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 10px;
+	text-align: left;
+	font-size: 12px;
+}
+
+.favLocationHelp {
+	text-align: right;
+	font-weight: bold;
+	color: #0000FF;
+	font-size: 15px;
+}
+
+.activeList {
+/*	margin-top: 10px;*/
+/*	border: #000000 1px double;*/
+	background-image: url(../Images/newsBg.png);
+	background-position: center;
+	background-repeat: repeat-y;
+}
+
+.activeCatalog {
+	text-align: left;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 60px;
+	margin-top: 13px;
+	width: 300px;
+/*	border-bottom: #000000 1px double;*/
+	float: left;
+}
+
+.catalogDetail {
+	text-align: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.catalogDetail2 {
+	text-align: right;
+	margin-top: 10px;
+}
+
+.catalogDetail .spanLink,.catalogDetail2 .spanLink {
+	border: #000000 1px double;
+	padding: 1px;
+}
+
+.refreshBtn {
+	font-size: 14px;
+	color: #0000FF;
+	margin-left: 50px;
+	margin-right: 20px;
+	display: inline;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.goBtn{
+	height: 22px;
+	width: 32px;
+	border:0;
+/*	background-image: url(../Images/goBtn.png);
+	background-position: center;
+	background-repeat: no-repeat;*/
+}
+
+.typeBtn {
+	margin-left: 20px;
+	margin-top: 0;
+}
+
+.typeBtn span {
+/*	border: #000000 1px double;*/
+}
+
+.map {
+	height: 400px;
+	width: 400px;
+	border: #000000 1px double;
+}
+
+.searchActive {
+	margin-top: 13px;
+	padding-top: 0;
+}
+
+.newsTitle{
+	background-image: url(../Images/newsTitleBg.png);
+	height: 48px;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.newActive {
+	margin-top: 20px;
+}
+
+.oneActive {
+/*	border-bottom: #000000 1px double;*/
+	text-align: left;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+	padding-bottom: 5px;
+	background-image: url(../Images/oneActiveBg.png);
+	background-position: center;
+	background-repeat: repeat-y;
+}
+
+.submitMethod {
+	margin-left: 10px;
+	margin-right: 15px;
+}
+
+.submitTime,.submitMethod {
+	font-size: 12px;
+}
+
+.activeAction {
+	margin-right: 10px;
+	font-size: 12px;
+}
+
+.pageDiv {
+	text-align: right;
+	padding-right: 20px;
+	font-size: 14px;
+}
+
+.currentPage {
+	margin-left: 7px;
+	margin-right: 7px;
+}
+
+.addNewActive {
+	margin-left: 10px;
+	margin-right: 10px;
+/*	margin-bottom: 10px;*/
+	padding-left: 10px;
+/*	border: #000000 1px double;*/
+	background-image: url(../Images/addShareBg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.hotActive,.interestAvtive,.knownPerson,.advise,.expose,.favLocation {
+/*	border: #000000 1px double;*/
+	background-image: url(../Images/activeBlockBg.png);
+	background-position: center;
+	background-repeat: repeat;
+	margin-top: 5px;
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+.hotTitle,.interestTitle,.knownTitle,.adviseTitle,.exposeTitle,.favTitle{
+/*	border-bottom: #000000 1px double;*/
+	padding-left: 60px;
+	padding-top: 13px;
+	background-image: url(../Images/newsTitleBg.png);
+	height: 48px;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.hotActiveDate {
+	margin-left: 15px;
+	margin-top: 5px;
+	margin-right: 15px;
+	font-size: 15px;
+	border-bottom: #000000 1px dashed;
+}
+
+.hotActiveDetail,.interestAvtiveDetail,.knownPersonDetail,.adviseDetail,.exposeDetail
+	{
+	margin-left: 20px;
+	font-size: 15px;
+}
+
+.fLDiv {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.selectedType {
+	font-weight: bold;
+}
+
+.publicArea{
+	font-size: 12px;
+}
+
+.showMapBtn{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/*Calendar begin*/
+.CalendarHead
+{
+   	background:black;
+   	color:White;
+	line-height:30px;
+}
+.CalendarBody
+{
+	background:white;
+}
+.Calendar
+{
+  	cursor:default;
+}
+.CalendarDisabledCell
+{
+   	color:Gray;
+}
+.CalendarHoverCell
+{
+   	color:red;
+}
+/*Calendar end*/
+
+.loadingTip{
+	border: #000000 1px double;
+	text-align: center;
+	margin: 10px 20px;
+	padding: 5px 0;
+	display: none;
+	background-image: url(../Images/loadingTipBg.png);
+	background-position: center;
+	background-repeat: repeat-y;
+}
+
+.bottomShow{
+	background-image: url(../Images/listBottom.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 99px;
+}

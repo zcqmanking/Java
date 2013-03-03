@@ -1,0 +1,144 @@
+@CHARSET "UTF-8";
+.commentBody{
+	vertical-align: top;
+	margin-top: 3px;
+	background-color: #4B817E;
+	display: block;
+	padding-left: 2px;
+}
+
+.commentBox{
+	display: block;
+	float: none;
+	text-align: left;
+}
+
+.commentAuthor,.commentTime{
+	font-size: 11px;
+}
+
+.commentAuthor{
+	margin-right: 5px;
+}
+
+.sendCommentBar{
+	background-color: #4B817E;
+	padding: 3px 5px;
+	text-align: center;
+}
+
+.commentBar{
+	overflow: hidden;
+}
+
+.shareComments{
+	display: none;
+}
+
+.commentSubmitBtn{
+	margin-top: 3px;
+}
+
+.commentList{
+	
+}
+
+.commentList table{
+	width: 100%;
+	border: 0;
+}
+
+.commentSubmitBtn{
+	text-align: right;
+	width: 100%;
+}
+
+.cArea{
+	display: inline;
+}
+
+.commentUserPic{
+	float: left;
+	margin-right: 6px;
+	height: 30px;
+	width: 30px;
+}
+
+.copyRight {
+	margin-top: 20px;
+	text-align: center;
+	border-top: #9999CC 1px dashed;
+	padding-top: 5px;
+	font-size: 12px;
+}
+
+.commentDel{
+	width: 15px;
+	height: 20px;
+	float: right;
+	cursor: pointer;
+	background-image: url(../Images/allBtn.png);
+	background-repeat: no-repeat;
+	background-position: 0px -139px;
+	text-decoration: none;
+	font-size: 1px;
+	display: none;
+}
+
+/**页面导航部分*/
+body {
+	text-align: center;
+	font-family: "微软雅黑", "宋体", "楷体", "华文楷体", "华文宋体";
+	background-image: url(../Images/bg.jpg);
+	background-position: center;
+	background-repeat: repeat;
+	margin-top: 0;
+}
+
+.body {
+	width: 1000px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.head {
+	width: 100%;
+	text-align: left;
+	font-size: 12px;
+	margin-bottom: 0;
+	padding-left: 200px;
+	padding-top: 140px;
+	height: 167px;
+	background-image: url(../Images/title.jpg);
+}
+
+ul {
+	display: inline;
+	font-size: 16px;
+	background-image: url(../Images/bg_navg.jpg);
+}
+
+li {
+	display: inline;
+}
+
+li.cur {
+	font-weight: bold;
+}
+
+li.line {
+	color: #743D3B;
+}
+
+.search {
+	display: inline;
+	margin-left: 100px;
+	margin-right: 20px;
+}
+
+.searchForm {
+	display: inline;
+}
+
+/**页面导航结束**/

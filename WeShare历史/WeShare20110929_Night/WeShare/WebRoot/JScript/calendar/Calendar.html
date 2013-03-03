@@ -1,0 +1,55 @@
+<style>
+    .CalendarHead
+    {
+    	background:black;
+    	color:White;
+	line-height:30px;
+    }
+    .CalendarBody
+    {
+    }
+    .Calendar
+    {
+    	cursor:default;
+    }
+    .CalendarDisabledCell
+    {
+    	color:Gray;
+    }
+    .CalendarHoverCell
+    {
+    	color:green;
+    }
+</style>
+<script src="Animation.js" type="text/javascript"></script>
+<script src="StoryBoard.js" type="text/javascript"></script>
+<script src="EventHandler.js" type="text/javascript"></script>
+<script src="ImageBox.js" type="text/javascript"></script>
+<script src="BorderDiv.js" type="text/javascript"></script>
+<script src="DateEx.js" type="text/javascript"></script>
+<script src="Calendar.js" type="text/javascript"></script>
+<script>
+var c=new Calendar(new Date,2);
+var calendar=new BorderedDiv(
+	c,
+	[
+		["skin/t1.png","skin/t2.png","skin/t3.png"],
+		["skin/l1.png",0,"skin/r1.png"],
+		["skin/l2.png","skin/b1.png","skin/r2.png"]
+	],
+	{
+		"top":"35px",
+		"left":"15px",
+		"bottom":"15px",
+		"right":"15px"
+	}
+);
+
+window.onload=function(){
+    calendar.style.visibility="hidden";
+    document.body.appendChild(calendar);
+}
+</script>
+<body>
+    <input id="date1" onFocus="var me=this;calendar.style.visibility='visible';c.onSelect['+='](function(v){me.value=new DateEx(v).format('%4y-%2m-%2d %2h:%2i');calendar.style.visibility='hidden';});"/>
+</body>

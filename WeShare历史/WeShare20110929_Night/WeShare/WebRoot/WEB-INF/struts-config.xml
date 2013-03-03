@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="loginForm" type="com.weshare.struts.form.LoginForm" />
+		<form-bean name="myPageForm" type="com.weshare.struts.form.MyPageForm" />
+		<form-bean name="regForm" type="com.weshare.struts.form.RegForm" />
+    <form-bean name="searchForm" type="com.weshare.struts.form.SearchForm" />
+    <form-bean name="addShareForm" type="com.weshare.struts.form.AddShareForm" />
+    <form-bean name="modifyShareForm" type="com.weshare.struts.form.ModifyShareForm" />
+    <form-bean name="getShareInfoForm" type="com.weshare.struts.form.GetShareInfoForm" />
+    <form-bean name="commentForm" type="com.weshare.struts.form.CommentForm" />
+    <form-bean name="cntUpdateForm" type="com.weshare.struts.form.CntUpdateForm" />
+    <form-bean name="getNewsForm" type="com.weshare.struts.form.GetNewsForm" />
+    <form-bean name="homeForm" type="com.weshare.struts.form.HomeForm" />
+
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<action attribute="loginForm" input="/login.jsp" name="loginForm"
+			path="/login" scope="request" type="com.weshare.struts.action.LoginAction">
+			<set-property property="cancellable" value="true" />
+			<forward name="fail" path="/login.jsp" />
+			<forward name="success" path="/myPage.do" redirect="true"/>
+			<forward name="failPage" path="/errPage.jsp" />
+		</action>
+		<action attribute="myPageForm" input="/login.jsp" name="myPageForm"
+			path="/myPage" scope="request" type="com.weshare.struts.action.MyPageAction">
+			<set-property property="cancellable" value="true" />
+			<forward name="fail" path="/login.jsp" />
+			<forward name="success" path="/myPage.jsp" />
+			<forward name="failPage" path="/errPage.jsp" />
+		</action>
+		<action attribute="regForm" input="/reg.jsp" name="regForm"
+			path="/reg" scope="request" type="com.weshare.struts.action.RegAction">
+			<set-property property="cancellable" value="true" />
+			<forward name="fail" path="/reg.jsp" />
+			<forward name="success" path="/login.jsp" />
+		</action>
+    <action
+      attribute="searchForm"
+      input="/myPage.jsp"
+      name="searchForm"
+      path="/search"
+      scope="request"
+      type="com.weshare.struts.action.SearchAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="searchResult" path="/search.jsp" />
+    </action>
+    <action
+      attribute="addShareForm"
+      input="/myPage.jsp"
+      name="addShareForm"
+      path="/addShare"
+      scope="request"
+      type="com.weshare.struts.action.AddShareAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/actionResult.jsp" />
+      
+    </action>
+    <action
+      attribute="modifyShareForm"
+      name="modifyShareForm"
+      parameter="method"
+      path="/modifyShare"
+      scope="request"
+      type="com.weshare.struts.action.ModifyShareAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/actionResult.jsp" />
+    </action>
+    <action
+      attribute="getShareInfoForm"
+      name="getShareInfoForm"
+      parameter="method"
+      path="/getShareInfo"
+      scope="request"
+      type="com.weshare.struts.action.GetShareInfoAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/getShareInfo.jsp" />
+    </action>
+    <action
+      attribute="commentForm"
+      input="/formValidate/comment.jsp"
+      name="commentForm"
+      parameter="method"
+      path="/comment"
+      scope="request"
+      type="com.weshare.struts.action.CommentAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/actionResult.jsp" />
+      <forward name="list" path="/commentList.jsp" />
+    </action>
+    <action
+      attribute="cntUpdateForm"
+      input="/formValidate/cntUpdate.jsp"
+      name="cntUpdateForm"
+      parameter="method"
+      path="/cntUpdate"
+      scope="request"
+      type="com.weshare.struts.action.CntUpdateAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="fail" path="/actionResult.jsp" />
+      <forward name="cntPage" path="/showCnt.jsp" />
+    </action>
+    <action
+      attribute="getNewsForm"
+      input="/formValidate/getNews.jsp"
+      name="getNewsForm"
+      parameter="method"
+      path="/getNews"
+      scope="request"
+      type="com.weshare.struts.action.GetNewsAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/showNews.jsp" />
+      <forward name="fail" path="/actionResult.jsp" />
+    </action>
+    <action
+      attribute="homeForm"
+      input="/login.jsp"
+      name="homeForm"
+      path="/home"
+      scope="request"
+      type="com.weshare.struts.action.HomeAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="fail" path="/homeErr.jsp" />
+      <forward name="success" path="/home.jsp" />
+    </action>
+	</action-mappings>
+
+	<message-resources parameter="com.weshare.struts.ApplicationResources" />
+</struts-config>
+

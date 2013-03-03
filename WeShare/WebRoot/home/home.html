@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WeShare</title>
+<style type="text/css">
+body {
+	text-align: center;
+	font-family: "微软雅黑", "宋体", "楷体", "华文楷体", "华文宋体";
+}
+.body {
+	width: 1000px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.head {
+	width: 100%;
+	text-align: left;
+	font-size: 12px;
+	margin-bottom: 10px;
+	border: #000000 1px solid;
+}
+ul {
+	display: inline;
+	font-size: 16px;
+	background-image: url(Images/bg_navg.jpg);
+}
+li {
+	display: inline;
+}
+li.cur {
+	font-weight: bold;
+}
+li.line {
+	color: #743D3B;
+}
+.spanLink {
+	cursor: pointer;
+}
+.map {
+	height: 400px;
+	width: 400px;
+	border: #000000 1px double;
+}
+.searchForm {
+	display: inline;
+}
+.search {
+	display: inline;
+	margin-left: 100px;
+	margin-right: 20px;
+}
+
+.activeCount{
+	margin-top: 20px;
+	padding-left: 10px;
+	text-align: left;
+	border: #000000 1px solid;
+}
+
+.favLocation{
+	padding-left: 10px;
+	margin-top: 10px;
+	text-align: left;
+	border: #000000 1px solid;
+}
+
+.favTitle{
+	border-bottom:  #000000 1px solid;
+}
+
+.favList{
+	margin-left: 10px;
+}
+
+.map{
+	width: 400px;
+	height: 400px;
+}
+
+.copyRight{
+	margin-top: 20px;
+	text-align: center;
+	border-top: #9999CC 1px dashed;
+	padding-top: 5px;
+	font-size: 12px;
+}
+
+.personalInfo{
+	text-align: left;
+	border: #000000 1px solid;
+}
+
+.submitList,.joinList,.viewList{
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.sListTitle,.jListTitle,.vListTitle{
+	border-bottom: #000000 2px solid;
+}
+
+.listDiv{
+	border: #000000 1px solid;
+	padding-bottom: 10px;
+	margin-right: 1px;
+}
+
+.clickSpan{
+	cursor: pointer;
+	text-decoration: underline;
+	display: block;
+}
+
+.sList{
+	margin-left: 10px;
+}
+
+.cntlist,.submitTime{
+	font-size: 12px;
+}
+
+.cntList{
+	margin-left: 10px;
+}
+
+.cnt{
+	margin-left: 5px;
+	text-decoration: underline;
+	color: #0000FF;
+}
+
+.oneSubmit{
+	margin-bottom: 10px;
+}
+
+.more{
+	float: right;
+	font-size: 12px;
+}
+
+.feetLine,.log{
+	margin-top: 10px;
+	text-align: left;
+}
+
+.lineTitle,.logTitle{
+	width: 500px;
+	padding-left: 30px;
+	border: #000000 1px solid;
+}
+
+.footPic{
+	width: 65px;
+	height: 65px;
+	cursor: pointer;
+}
+
+.activeStartTime,.activeLocation{
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 12px;
+}
+
+.guidePic,.onePic{
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+.logList{
+	padding-left: 10px;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.logTitleTxt{
+	margin-left: 5px;
+}
+
+.oneLog{
+	margin-bottom: 6px;
+}
+</style>
+</head>
+<body>
+<div class="body">
+  <!--头部导航-->
+  <div class="head"> <img border="0" src="Images/icon.jpg" />
+    <ul>
+      <li class="cur"><a href="###">首页</a></li>
+      <li class="line">|</li>
+      <li><a href="###">我的主页</a></li>
+      <li class="line">|</li>
+      <li><a href="###">晒友</a></li>
+      <li class="line">|</li>
+      <li><a href="###">地盘</a></li>
+    </ul>
+    <div class="search">
+      <form name="searchForm" class="searchForm" action="###" target="_self" method="post" title="搜索" onsubmit="return onSearch();">
+        <select name="searchType" id="searchType">
+          <option value="1" selected="selected">贴士</option>
+          <option value="2" >地盘</option>
+          <option value="3" >晒友</option>
+        </select>
+        <input type="text" name="searchKey" id="searchKey"  />
+        <input type="submit" name="goSearch" value="Go" />
+      </form>
+    </div>
+    <span><a href="###" target="_self">我的账号</a></span> </div>
+   <table cellspacing="1" cellpadding="0">
+		<tr valign="top">
+			<!--左侧内容-->
+			<td width="200">
+                <div class="personalInfo">
+                    <img border="0" src="Images/ppleft.jpg" /><br />
+                    微尘小粒
+                </div>
+                <div class="activeCount">
+                	<div class="submitTotal">已发布活动<a href="activeList.do?m=s">20</a>个</div>
+                	<div class="JoinTotal">已参加他人活动<a href="activeList.do?m=j">2</a>个</div>
+                	<div class="ViewTotal">已围观活动<a href="activeList.do?m=j">20</a>个</div>
+                </div>
+                <div class="favLocation">
+                	<div class="favTitle">想去的地方</div>
+                    <div class="favList">
+                    	<div class="oneFav">布达拉</div>
+                    	<div class="oneFav">敦煌</div>
+                    	<div class="oneFav">喀什</div>
+                    </div>
+                </div>
+            </td>
+            <!--右侧内容-->
+            <td width="800">
+            	<table cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<td width="400" align="left" valign="top">
+                        	<!--最近活动列表-->
+                        	<div  class="listDiv">
+                                <div class="submitList">
+                                	<span class="more">更多&gt;&gt;</span>
+                                    <div class="sListTitle">我的发起</div>
+                                    <div class="sList">
+                                    	<div class="oneSubmit">
+                                        	<span class="clickSpan" onclick="showDetail(21311)">2011.10.04&nbsp;征人同爬长城</span>
+                                        	<span class="submitTime">09-20 20:12</span>
+                                            <span class="cntlist">
+                                                <span class="cnt">1人</span>参与
+                                                <span class="cnt">2人</span>围观
+                                                <span class="cnt">3人</span>评论
+                                            </span>
+                                        </div>
+                                    	<div class="oneSubmit">
+                                        	<span class="clickSpan" onclick="showDetail(21311)">2011.10.04&nbsp;征人同爬长城</span>
+                                        	<span class="submitTime">09-20 20:12</span>
+                                            <span class="cntlist">
+                                                <span class="cnt">1人</span>参与
+                                                <span class="cnt">2人</span>围观
+                                                <span class="cnt">3人</span>评论
+                                            </span>
+                                        </div>
+                                    	<div class="oneSubmit">
+                                        	<span class="clickSpan" onclick="showDetail(21311)">2011.10.04&nbsp;征人同爬长城</span>
+                                        	<span class="submitTime">09-20 20:12</span>
+                                            <span class="cntlist">
+                                                <span class="cnt">1人</span>参与
+                                                <span class="cnt">2人</span>围观
+                                                <span class="cnt">3人</span>评论
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="joinList">
+                                	<span class="more">更多&gt;&gt;</span>
+                                    <div class="jListTitle">我的参与</div>
+                                    <div class="sList">
+                                    	<div class="oneSubmit">
+                                        	<span class="clickSpan" onclick="showDetail(21311)">2011.10.04&nbsp;征人同爬长城</span>
+                                        	<span class="submitTime">09-20 20:12</span>
+                                            <span class="cntlist">
+                                                <span class="cnt">1人</span>参与
+                                                <span class="cnt">2人</span>围观
+                                                <span class="cnt">3人</span>评论
+                                            </span>
+                                        </div>
+                                    	<div class="oneSubmit">
+                                        	<span class="clickSpan" onclick="showDetail(21311)">2011.10.04&nbsp;征人同爬长城</span>
+                                        	<span class="submitTime">09-20 20:12</span>
+                                            <span class="cntlist">
+                                                <span class="cnt">1人</span>参与
+                                                <span class="cnt">2人</span>围观
+                                                <span class="cnt">3人</span>评论
+                                            </span>
+                                        </div>
+                                    	<div class="oneSubmit">
+                                        	<span class="clickSpan" onclick="showDetail(21311)">2011.10.04&nbsp;征人同爬长城</span>
+                                        	<span class="submitTime">09-20 20:12</span>
+                                            <span class="cntlist">
+                                                <span class="cnt">1人</span>参与
+                                                <span class="cnt">2人</span>围观
+                                                <span class="cnt">3人</span>评论
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="viewList">
+                                	<span class="more">更多&gt;&gt;</span>
+                                    <div class="vListTitle">我的围观</div>
+                                    <div class="sList">
+                                    	<div class="oneSubmit">
+                                        	<span class="clickSpan" onclick="showDetail(21311)">2011.10.04&nbsp;征人同爬长城</span>
+                                        	<span class="submitTime">09-20 20:12</span>
+                                            <span class="cntlist">
+                                                <span class="cnt">1人</span>参与
+                                                <span class="cnt">2人</span>围观
+                                                <span class="cnt">3人</span>评论
+                                            </span>
+                                        </div>
+                                    	<div class="oneSubmit">
+                                        	<span class="clickSpan" onclick="showDetail(21311)">2011.10.04&nbsp;征人同爬长城</span>
+                                        	<span class="submitTime">09-20 20:12</span>
+                                            <span class="cntlist">
+                                                <span class="cnt">1人</span>参与
+                                                <span class="cnt">2人</span>围观
+                                                <span class="cnt">3人</span>评论
+                                            </span>
+                                        </div>
+                                    	<div class="oneSubmit">
+                                        	<span class="clickSpan" onclick="showDetail(21311)">2011.10.04&nbsp;征人同爬长城</span>
+                                        	<span class="submitTime">09-20 20:12</span>
+                                            <span class="cntlist">
+                                                <span class="cnt">1人</span>参与
+                                                <span class="cnt">2人</span>围观
+                                                <span class="cnt">3人</span>评论
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    	<td width="400" valign="top" align="center">
+                        	<div class="map">地图</div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2">
+                            <!--脚印连连看-->
+                            <div class="feetLine">
+                            	<div class="lineTitle">脚印连连看</div>
+                                <table cellpadding="0" cellspacing="0">
+                                	<tr class="feet">
+                                    	<td class="onePic">
+                                            <img class="footPic" src="Images/icon.jpg" onclick="showAll(2312);" /><br />
+                                            <span class="activeStartTime">2011.6.1</span><br />
+                                            <span class="activeLocation">欢乐谷</span>
+                                        </td>
+                                		<td class="guidePic" valign="top">
+                                    		<img class="footPic" src="Images/foot.jpg" />
+                                    	</td>
+                                    	<td class="onePic">
+                                            <img class="footPic" src="Images/icon.jpg" onclick="showAll(2312);" /><br />
+                                            <span class="activeStartTime">2011.7.5</span><br />
+                                            <span class="activeLocation">玉渊潭</span>
+                                        </td>
+                                		<td class="guidePic" valign="top">
+                                    		<img class="footPic" src="Images/foot.jpg" />
+                                    	</td>
+                                    	<td class="onePic">
+                                            <img class="footPic" src="Images/icon.jpg" onclick="showAll(2312);" /><br />
+                                            <span class="activeStartTime">2011.8.9</span><br />
+                                            <span class="activeLocation">颐和园</span>
+                                        </td>
+                                		<td class="guidePic" valign="top">
+                                    		<img class="footPic" src="Images/foot.jpg" />
+                                    	</td>
+                                    	<td class="onePic">
+                                            <img class="footPic" src="Images/icon.jpg" onclick="showAll(2312);" /><br />
+                                            <span class="activeStartTime">2011.9.1</span><br />
+                                            <span class="activeLocation">毛腊肉纪念堂</span>
+                                        </td>
+                                	</tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td colspan="2">
+                            <!--游记-->
+                            <div class="log">
+                            	<div class="logTitle">西游行记</div>
+                                <div class="logList">
+                                	<div class="oneLog">
+                                    	<span class="activeStartTime">2011.9.1</span>
+                                        <span class="logTitleTxt"><a href="###" target="_blank">参观毛腊肉后记</a></span>
+                                    </div>
+                                	<div class="oneLog">
+                                    	<span class="activeStartTime">2011.8.9</span>
+                                        <span class="logTitleTxt"><a href="###" target="_blank">美女相伴颐和园</a></span>
+                                    </div>
+                                	<div class="oneLog">
+                                    	<span class="activeStartTime">2011.7.5</span>
+                                        <span class="logTitleTxt"><a href="###" target="_blank">清凉宜人玉渊潭</a></span>
+                                    </div>
+                                	<div class="oneLog">
+                                    	<span class="activeStartTime">2011.6.1</span>
+                                        <span class="logTitleTxt"><a href="###" target="_blank">儿童节日欢乐谷</a></span>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+   </table>
+  <!--版权信息-->
+  <div class="copyRight">
+  &copy;2011&nbsp;WeShare
+  </div>
+</div>
+</body>
+</html>

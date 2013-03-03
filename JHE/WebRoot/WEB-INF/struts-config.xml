@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="jingangForm" type="com.jhe.struts.form.JingangForm" />
+    <form-bean name="paijianForm" type="com.jhe.struts.form.PaijianForm" />
+    <form-bean name="prePaiJianForm" type="com.jhe.struts.form.PrePaiJianForm" />
+    <form-bean name="qianshouForm" type="com.jhe.struts.form.QianshouForm" />
+    <form-bean name="queryForm" type="com.jhe.struts.form.QueryForm" />
+    <form-bean name="employeeForm" type="com.jhe.struts.form.EmployeeForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+      attribute="jingangForm"
+      input="/index.jsp"
+      name="jingangForm"
+      path="/jingang"
+      scope="request"
+      type="com.jhe.struts.action.JingangAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="paijianForm"
+      input="/paijian.jsp"
+      name="paijianForm"
+      path="/paijian"
+      scope="request"
+      type="com.jhe.struts.action.PaijianAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="prePaiJianForm"
+      input="/form/prePaiJian.jsp"
+      name="prePaiJianForm"
+      path="/prePaiJian"
+      scope="request"
+      type="com.jhe.struts.action.PrePaiJianAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/paijian.jsp" />
+    </action>
+    <action
+      attribute="qianshouForm"
+      input="/qianshou.jsp"
+      name="qianshouForm"
+      path="/qianshou"
+      scope="request"
+      type="com.jhe.struts.action.QianshouAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="queryForm"
+      input="/query.jsp"
+      name="queryForm"
+      path="/query"
+      scope="request"
+      type="com.jhe.struts.action.QueryAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/query.jsp" />
+    </action>
+    <action
+      attribute="employeeForm"
+      input="/employee.jsp"
+      name="employeeForm"
+      parameter="m"
+      path="/employee"
+      scope="request"
+      type="com.jhe.struts.action.EmployeeAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/employee.jsp" />
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="com.jhe.struts.ApplicationResources" />
+</struts-config>
+

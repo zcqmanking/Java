@@ -1,0 +1,238 @@
+2011-12-23 20:54:55 org.apache.catalina.core.ApplicationContext log
+信息: org.apache.webapp.balancer.BalancerFilter: init(): ruleChain: [org.apache.webapp.balancer.RuleChain: [org.apache.webapp.balancer.rules.URLStringMatchRule: Target string: News / Redirect URL: http://www.cnn.com], [org.apache.webapp.balancer.rules.RequestParameterRule: Target param name: paramName / Target param value: paramValue / Redirect URL: http://www.yahoo.com], [org.apache.webapp.balancer.rules.AcceptEverythingRule: Redirect URL: http://jakarta.apache.org]]
+2011-12-23 20:54:55 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 20:54:55 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 20:54:56 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 20:54:56 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 20:55:09 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet action threw exception
+java.lang.NullPointerException
+	at com.jhe.odbc.dbconn.DBManager.doQuery(DBManager.java:89)
+	at com.jhe.struts.action.PrePaiJianAction.execute(PrePaiJianAction.java:48)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at com.jhe.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:22)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:215)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:843)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:679)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1293)
+	at java.lang.Thread.run(Thread.java:662)
+2011-12-23 20:59:50 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet action threw exception
+java.lang.NullPointerException
+	at com.jhe.odbc.dbconn.DBManager.doQuery(DBManager.java:90)
+	at com.jhe.struts.action.PrePaiJianAction.execute(PrePaiJianAction.java:48)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at com.jhe.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:22)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:215)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:843)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:679)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1293)
+	at java.lang.Thread.run(Thread.java:662)
+2011-12-23 20:59:53 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet action threw exception
+java.lang.NullPointerException
+	at com.jhe.odbc.dbconn.DBManager.doQuery(DBManager.java:90)
+	at com.jhe.struts.action.PrePaiJianAction.execute(PrePaiJianAction.java:48)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at com.jhe.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:22)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:215)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:843)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:679)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1293)
+	at java.lang.Thread.run(Thread.java:662)
+2011-12-23 20:59:55 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet action threw exception
+java.lang.NullPointerException
+	at com.jhe.odbc.dbconn.DBManager.doQuery(DBManager.java:90)
+	at com.jhe.struts.action.PrePaiJianAction.execute(PrePaiJianAction.java:48)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at com.jhe.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:22)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:215)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:843)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:679)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1293)
+	at java.lang.Thread.run(Thread.java:662)
+2011-12-23 21:00:16 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:00:16 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:00:16 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:00:16 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:00:54 org.apache.catalina.core.ApplicationContext log
+信息: org.apache.webapp.balancer.BalancerFilter: init(): ruleChain: [org.apache.webapp.balancer.RuleChain: [org.apache.webapp.balancer.rules.URLStringMatchRule: Target string: News / Redirect URL: http://www.cnn.com], [org.apache.webapp.balancer.rules.RequestParameterRule: Target param name: paramName / Target param value: paramValue / Redirect URL: http://www.yahoo.com], [org.apache.webapp.balancer.rules.AcceptEverythingRule: Redirect URL: http://jakarta.apache.org]]
+2011-12-23 21:00:54 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 21:00:54 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 21:00:54 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 21:00:54 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 21:01:12 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet action threw exception
+java.lang.NullPointerException
+	at com.jhe.odbc.dbconn.DBManager.doQuery(DBManager.java:90)
+	at com.jhe.struts.action.PrePaiJianAction.execute(PrePaiJianAction.java:48)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at com.jhe.util.CharacterEncodingFilter.doFilter(CharacterEncodingFilter.java:22)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:215)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:843)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:679)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1293)
+	at java.lang.Thread.run(Thread.java:662)
+2011-12-23 21:08:43 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:08:43 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:08:43 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:08:43 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:09:48 org.apache.catalina.core.ApplicationContext log
+信息: org.apache.webapp.balancer.BalancerFilter: init(): ruleChain: [org.apache.webapp.balancer.RuleChain: [org.apache.webapp.balancer.rules.URLStringMatchRule: Target string: News / Redirect URL: http://www.cnn.com], [org.apache.webapp.balancer.rules.RequestParameterRule: Target param name: paramName / Target param value: paramValue / Redirect URL: http://www.yahoo.com], [org.apache.webapp.balancer.rules.AcceptEverythingRule: Redirect URL: http://jakarta.apache.org]]
+2011-12-23 21:09:48 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 21:09:48 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 21:09:48 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 21:09:48 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 21:13:03 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:13:03 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:13:03 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:13:03 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:13:18 org.apache.catalina.core.ApplicationContext log
+信息: org.apache.webapp.balancer.BalancerFilter: init(): ruleChain: [org.apache.webapp.balancer.RuleChain: [org.apache.webapp.balancer.rules.URLStringMatchRule: Target string: News / Redirect URL: http://www.cnn.com], [org.apache.webapp.balancer.rules.RequestParameterRule: Target param name: paramName / Target param value: paramValue / Redirect URL: http://www.yahoo.com], [org.apache.webapp.balancer.rules.AcceptEverythingRule: Redirect URL: http://jakarta.apache.org]]
+2011-12-23 21:13:18 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 21:13:18 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 21:13:18 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 21:13:18 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 21:13:36 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:13:36 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:13:36 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:13:36 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:13:46 org.apache.catalina.core.ApplicationContext log
+信息: org.apache.webapp.balancer.BalancerFilter: init(): ruleChain: [org.apache.webapp.balancer.RuleChain: [org.apache.webapp.balancer.rules.URLStringMatchRule: Target string: News / Redirect URL: http://www.cnn.com], [org.apache.webapp.balancer.rules.RequestParameterRule: Target param name: paramName / Target param value: paramValue / Redirect URL: http://www.yahoo.com], [org.apache.webapp.balancer.rules.AcceptEverythingRule: Redirect URL: http://jakarta.apache.org]]
+2011-12-23 21:13:46 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 21:13:46 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 21:13:46 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 21:13:46 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 21:14:48 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:14:48 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:14:48 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:14:48 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:14:57 org.apache.catalina.core.ApplicationContext log
+信息: org.apache.webapp.balancer.BalancerFilter: init(): ruleChain: [org.apache.webapp.balancer.RuleChain: [org.apache.webapp.balancer.rules.URLStringMatchRule: Target string: News / Redirect URL: http://www.cnn.com], [org.apache.webapp.balancer.rules.RequestParameterRule: Target param name: paramName / Target param value: paramValue / Redirect URL: http://www.yahoo.com], [org.apache.webapp.balancer.rules.AcceptEverythingRule: Redirect URL: http://jakarta.apache.org]]
+2011-12-23 21:14:58 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 21:14:58 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 21:14:58 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+2011-12-23 21:14:58 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+2011-12-23 21:17:05 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:17:05 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+2011-12-23 21:17:05 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+2011-12-23 21:17:05 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()

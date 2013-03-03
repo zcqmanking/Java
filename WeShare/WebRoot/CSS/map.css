@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+*{
+	color: #838383
+}
+
+body {
+	width: 750px;
+	height: 470px;
+	overflow: hidden;
+	margin:0px;padding:0px;
+	font-family: "微软雅黑", "宋体", "楷体", "华文楷体", "华文宋体";
+}
+
+#content, #mapDiv {
+	width: 750px;
+}
+
+#mapDiv {
+	margin-top: 8px;
+}
+
+#popMapDiv {
+	height: 400px;
+	filter: alpha(opacity=100);
+	background-color: #FFFFFF;
+	border: 1px solid gray;
+}
+
+.highLightRet {
+	background-color: #FFFFFF;
+}
+
+.normalRet {
+	background-color: #dbdbdb;
+}
+
+.clearRet {
+	text-decoration: underline;
+	color: #FF0000;
+	cursor: pointer;
+}
+
+.locResult{
+	padding: 5px;
+}
+
+.content{
+	padding: 9px 0px 0px 15px;
+}
+
+#mapDiv{
+	padding: 0px 0px 0px 15px;
+}
+.content table{
+	padding: 0px;
+	margin: 0px;
+	width: 750px
+}
+
+.content table tr{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	height: 30px;
+	line-height: 30px;
+}
+
+#locTmp{
+	height: 21px;
+	background: #FFF;
+	border: 1px solid #d7d7d7;
+	padding: 0px;
+	margin: 0px;
+	line-height: 21px;
+}
+
+#locTmp{
+	width:220px
+}
+
+a.doSearch{
+	text-align: center;
+	line-height: 24px;
+	text-decoration: none;
+	height: 24px;
+	width: 95px;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	background: url(../Images/ueditor/icons-all.gif)  no-repeat;
+}
+
+a.doSearch:hover{
+	background-position: 0 -30px;
+}

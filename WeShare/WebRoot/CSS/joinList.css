@@ -1,0 +1,116 @@
+@CHARSET "UTF-8";
+.spanLink {
+	cursor: pointer;
+}
+.map {
+	height: 400px;
+	width: 400px;
+	border: #000000 1px double;
+}
+
+.activeCount{
+	margin-top: 20px;
+	padding-left: 10px;
+	text-align: left;
+	border: #000000 1px solid;
+}
+
+.favLocation{
+	padding-left: 10px;
+	margin-top: 10px;
+	text-align: left;
+	border: #000000 1px solid;
+}
+
+.favTitle{
+	border-bottom:  #000000 1px solid;
+}
+
+.favList{
+	margin-left: 10px;
+}
+
+.map{
+	width: 400px;
+	height: 400px;
+}
+
+.personalInfo{
+	text-align: left;
+	border: #000000 1px solid;
+}
+
+.joinList{
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+.jListTitle{
+	border-bottom: #000000 2px solid;
+}
+
+.listDiv{
+	border: #000000 1px solid;
+	padding-bottom: 10px;
+	margin-right: 1px;
+}
+
+.clickSpan{
+	text-decoration: underline;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.sList{
+	margin-left: 10px;
+}
+
+.cntlist,.submitTime{
+	font-size: 12px;
+}
+
+.cntList{
+	margin-left: 10px;
+}
+
+.cnt{
+	margin-left: 5px;
+	text-decoration: underline;
+	color: #0000FF;
+}
+
+.oneSubmit{
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.activeLocation{
+	margin-top: 9px;
+	font-size: 12px;
+}
+
+.total{
+	margin-left: 20px;
+}
+
+.personal{
+	text-align: left;
+	margin-top: 0;
+	border: #000000 1px solid;
+}
+
+.jListTitle{
+	border-bottom: #000000 2px solid;
+}
+
+.loadingTip{
+	border: #000000 1px double;
+	text-align: center;
+	margin: 10px 20px;
+	padding: 5px 0;
+	display: none;
+	background-image: url(../Images/loadingTipBg.png);
+	background-position: center;
+	background-repeat: repeat-y;
+}

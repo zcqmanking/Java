@@ -1,0 +1,226 @@
+2011-12-23 20:54:52 org.apache.catalina.core.AprLifecycleListener init
+信息: Loaded APR based Apache Tomcat Native library 1.1.20.
+2011-12-23 20:54:52 org.apache.catalina.core.AprLifecycleListener init
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2011-12-23 20:54:53 org.apache.coyote.http11.Http11AprProtocol init
+信息: Initializing Coyote HTTP/1.1 on http-8080
+2011-12-23 20:54:53 org.apache.coyote.ajp.AjpAprProtocol init
+信息: Initializing Coyote AJP/1.3 on ajp-8009
+2011-12-23 20:54:53 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 2384 ms
+2011-12-23 20:54:54 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-12-23 20:54:54 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/5.5.31
+2011-12-23 20:54:54 org.apache.catalina.core.StandardHost start
+信息: XML validation disabled
+2011-12-23 20:54:56 org.apache.coyote.http11.Http11AprProtocol start
+信息: Starting Coyote HTTP/1.1 on http-8080
+2011-12-23 20:54:57 org.apache.coyote.ajp.AjpAprProtocol start
+信息: Starting Coyote AJP/1.3 on ajp-8009
+2011-12-23 20:54:57 org.apache.catalina.storeconfig.StoreLoader load
+信息: Find registry server-registry.xml at classpath resource
+2011-12-23 20:54:57 org.apache.catalina.startup.Catalina start
+信息: Server startup in 3153 ms
+2011-12-23 20:55:09 org.apache.struts.action.RequestProcessor processException
+警告: Unhandled Exception thrown: class java.lang.NullPointerException
+2011-12-23 20:59:47 org.apache.catalina.startup.HostConfig checkResources
+信息: Reloading context [/JHE]
+2011-12-23 20:59:50 org.apache.struts.action.RequestProcessor processException
+警告: Unhandled Exception thrown: class java.lang.NullPointerException
+2011-12-23 20:59:53 org.apache.struts.action.RequestProcessor processException
+警告: Unhandled Exception thrown: class java.lang.NullPointerException
+2011-12-23 20:59:55 org.apache.struts.action.RequestProcessor processException
+警告: Unhandled Exception thrown: class java.lang.NullPointerException
+2011-12-23 21:00:14 org.apache.coyote.http11.Http11AprProtocol pause
+信息: Pausing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:00:15 org.apache.coyote.ajp.AjpAprProtocol pause
+信息: Pausing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:00:16 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2011-12-23 21:00:16 org.apache.coyote.http11.Http11AprProtocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-8080
+2011-12-23 21:00:17 org.apache.coyote.ajp.AjpAprProtocol destroy
+信息: Stopping Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:00:52 org.apache.catalina.core.AprLifecycleListener init
+信息: Loaded APR based Apache Tomcat Native library 1.1.20.
+2011-12-23 21:00:52 org.apache.catalina.core.AprLifecycleListener init
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2011-12-23 21:00:53 org.apache.coyote.http11.Http11AprProtocol init
+信息: Initializing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:00:53 org.apache.coyote.ajp.AjpAprProtocol init
+信息: Initializing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:00:53 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 958 ms
+2011-12-23 21:00:53 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-12-23 21:00:53 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/5.5.31
+2011-12-23 21:00:53 org.apache.catalina.core.StandardHost start
+信息: XML validation disabled
+2011-12-23 21:00:54 org.apache.coyote.http11.Http11AprProtocol start
+信息: Starting Coyote HTTP/1.1 on http-8080
+2011-12-23 21:00:54 org.apache.coyote.ajp.AjpAprProtocol start
+信息: Starting Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:00:54 org.apache.catalina.storeconfig.StoreLoader load
+信息: Find registry server-registry.xml at classpath resource
+2011-12-23 21:00:54 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1501 ms
+2011-12-23 21:01:12 org.apache.struts.action.RequestProcessor processException
+警告: Unhandled Exception thrown: class java.lang.NullPointerException
+2011-12-23 21:03:55 org.apache.catalina.startup.HostConfig checkResources
+信息: Reloading context [/JHE]
+2011-12-23 21:06:05 org.apache.catalina.startup.HostConfig checkResources
+信息: Reloading context [/JHE]
+2011-12-23 21:08:41 org.apache.coyote.http11.Http11AprProtocol pause
+信息: Pausing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:08:42 org.apache.coyote.ajp.AjpAprProtocol pause
+信息: Pausing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:08:43 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2011-12-23 21:08:43 org.apache.coyote.http11.Http11AprProtocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-8080
+2011-12-23 21:08:44 org.apache.coyote.ajp.AjpAprProtocol destroy
+信息: Stopping Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:09:46 org.apache.catalina.core.AprLifecycleListener init
+信息: Loaded APR based Apache Tomcat Native library 1.1.20.
+2011-12-23 21:09:46 org.apache.catalina.core.AprLifecycleListener init
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2011-12-23 21:09:47 org.apache.coyote.http11.Http11AprProtocol init
+信息: Initializing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:09:47 org.apache.coyote.ajp.AjpAprProtocol init
+信息: Initializing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:09:47 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1259 ms
+2011-12-23 21:09:47 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-12-23 21:09:47 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/5.5.31
+2011-12-23 21:09:47 org.apache.catalina.core.StandardHost start
+信息: XML validation disabled
+2011-12-23 21:09:48 org.apache.coyote.http11.Http11AprProtocol start
+信息: Starting Coyote HTTP/1.1 on http-8080
+2011-12-23 21:09:48 org.apache.coyote.ajp.AjpAprProtocol start
+信息: Starting Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:09:48 org.apache.catalina.storeconfig.StoreLoader load
+信息: Find registry server-registry.xml at classpath resource
+2011-12-23 21:09:48 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1198 ms
+2011-12-23 21:10:58 org.apache.catalina.startup.HostConfig checkResources
+信息: Reloading context [/JHE]
+2011-12-23 21:12:29 org.apache.catalina.startup.HostConfig checkResources
+信息: Reloading context [/JHE]
+2011-12-23 21:13:01 org.apache.coyote.http11.Http11AprProtocol pause
+信息: Pausing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:13:02 org.apache.coyote.ajp.AjpAprProtocol pause
+信息: Pausing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:13:03 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2011-12-23 21:13:03 org.apache.coyote.http11.Http11AprProtocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-8080
+2011-12-23 21:13:04 org.apache.coyote.ajp.AjpAprProtocol destroy
+信息: Stopping Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:13:16 org.apache.catalina.core.AprLifecycleListener init
+信息: Loaded APR based Apache Tomcat Native library 1.1.20.
+2011-12-23 21:13:16 org.apache.catalina.core.AprLifecycleListener init
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2011-12-23 21:13:17 org.apache.coyote.http11.Http11AprProtocol init
+信息: Initializing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:13:17 org.apache.coyote.ajp.AjpAprProtocol init
+信息: Initializing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:13:17 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1029 ms
+2011-12-23 21:13:17 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-12-23 21:13:17 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/5.5.31
+2011-12-23 21:13:17 org.apache.catalina.core.StandardHost start
+信息: XML validation disabled
+2011-12-23 21:13:18 org.apache.coyote.http11.Http11AprProtocol start
+信息: Starting Coyote HTTP/1.1 on http-8080
+2011-12-23 21:13:18 org.apache.coyote.ajp.AjpAprProtocol start
+信息: Starting Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:13:18 org.apache.catalina.storeconfig.StoreLoader load
+信息: Find registry server-registry.xml at classpath resource
+2011-12-23 21:13:18 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1301 ms
+2011-12-23 21:13:34 org.apache.coyote.http11.Http11AprProtocol pause
+信息: Pausing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:13:35 org.apache.coyote.ajp.AjpAprProtocol pause
+信息: Pausing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:13:36 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2011-12-23 21:13:36 org.apache.coyote.http11.Http11AprProtocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-8080
+2011-12-23 21:13:37 org.apache.coyote.ajp.AjpAprProtocol destroy
+信息: Stopping Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:13:44 org.apache.catalina.core.AprLifecycleListener init
+信息: Loaded APR based Apache Tomcat Native library 1.1.20.
+2011-12-23 21:13:44 org.apache.catalina.core.AprLifecycleListener init
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2011-12-23 21:13:45 org.apache.coyote.http11.Http11AprProtocol init
+信息: Initializing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:13:45 org.apache.coyote.ajp.AjpAprProtocol init
+信息: Initializing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:13:45 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 996 ms
+2011-12-23 21:13:45 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-12-23 21:13:45 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/5.5.31
+2011-12-23 21:13:45 org.apache.catalina.core.StandardHost start
+信息: XML validation disabled
+2011-12-23 21:13:46 org.apache.coyote.http11.Http11AprProtocol start
+信息: Starting Coyote HTTP/1.1 on http-8080
+2011-12-23 21:13:46 org.apache.coyote.ajp.AjpAprProtocol start
+信息: Starting Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:13:46 org.apache.catalina.storeconfig.StoreLoader load
+信息: Find registry server-registry.xml at classpath resource
+2011-12-23 21:13:46 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1265 ms
+2011-12-23 21:14:46 org.apache.catalina.startup.HostConfig checkResources
+信息: Reloading context [/JHE]
+2011-12-23 21:14:46 org.apache.coyote.http11.Http11AprProtocol pause
+信息: Pausing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:14:47 org.apache.coyote.ajp.AjpAprProtocol pause
+信息: Pausing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:14:48 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2011-12-23 21:14:48 org.apache.coyote.http11.Http11AprProtocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-8080
+2011-12-23 21:14:49 org.apache.coyote.ajp.AjpAprProtocol destroy
+信息: Stopping Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:14:56 org.apache.catalina.core.AprLifecycleListener init
+信息: Loaded APR based Apache Tomcat Native library 1.1.20.
+2011-12-23 21:14:56 org.apache.catalina.core.AprLifecycleListener init
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2011-12-23 21:14:57 org.apache.coyote.http11.Http11AprProtocol init
+信息: Initializing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:14:57 org.apache.coyote.ajp.AjpAprProtocol init
+信息: Initializing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:14:57 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 967 ms
+2011-12-23 21:14:57 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2011-12-23 21:14:57 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/5.5.31
+2011-12-23 21:14:57 org.apache.catalina.core.StandardHost start
+信息: XML validation disabled
+2011-12-23 21:14:58 org.apache.coyote.http11.Http11AprProtocol start
+信息: Starting Coyote HTTP/1.1 on http-8080
+2011-12-23 21:14:58 org.apache.coyote.ajp.AjpAprProtocol start
+信息: Starting Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:14:58 org.apache.catalina.storeconfig.StoreLoader load
+信息: Find registry server-registry.xml at classpath resource
+2011-12-23 21:14:58 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1216 ms
+2011-12-23 21:17:03 org.apache.coyote.http11.Http11AprProtocol pause
+信息: Pausing Coyote HTTP/1.1 on http-8080
+2011-12-23 21:17:04 org.apache.coyote.ajp.AjpAprProtocol pause
+信息: Pausing Coyote AJP/1.3 on ajp-8009
+2011-12-23 21:17:05 org.apache.catalina.core.StandardService stop
+信息: Stopping service Catalina
+2011-12-23 21:17:05 org.apache.coyote.http11.Http11AprProtocol destroy
+信息: Stopping Coyote HTTP/1.1 on http-8080
+2011-12-23 21:17:06 org.apache.coyote.ajp.AjpAprProtocol destroy
+信息: Stopping Coyote AJP/1.3 on ajp-8009

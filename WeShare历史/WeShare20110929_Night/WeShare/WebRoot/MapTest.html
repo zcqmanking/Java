@@ -1,0 +1,270 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>地图测试</title>
+<style type="text/css">
+#locationDiv,#mapDiv{
+	width: 750px;
+}
+
+#mapDiv{
+	margin-top: 20px;
+}
+
+#popMapDiv{
+	height: 400px;
+	filter: alpha(opacity=100);
+	background-color: #FFFFFF;
+}
+
+.highLightRet{
+	background-color: #FFFFFF;
+}
+
+.normalRet{
+	background-color: #dbdbdb;
+}
+</style>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="js/pop.js"></script>
+<script type="text/vbscript" language="vbscript" src="vbs/charEncoding.vbs"></script>
+<script type="text/vbscript" language="vbscript" src="vbs/myPage.vbs"></script>
+<script type="text/javascript">
+	  
+	  var infoWin = new google.maps.InfoWindow({	//初始化信息窗口
+	  	content: "",
+		position: new google.maps.LatLng(0,0)
+	  });
+	  var geocoder;	//地址解析服务
+	  var map;		//初始地图
+	  var popMap;	//弹出的地图
+	  var bounds;	//初始地图的viewport
+	  var markerArray = [];	//标记的数组
+	  
+      function initialize() {
+	  	// 默认位置的经纬度
+        var centerLatLng = new google.maps.LatLng(39.962797,116.358111);//北邮
+		geocoder = new google.maps.Geocoder();
+        var myOptions = {
+          zoom: 14,
+          center: centerLatLng,
+          disableDefaultUI: true,	//	禁用默认控件
+		  mapTypeId: google.maps.MapTypeId.ROADMAP	//只显示默认的地图界面
+        };
+ 
+        map = new google.maps.Map($("map_canvas"),
+            myOptions);
+			
+		bounds = map.getBounds();	//获得初始地图的viewport
+ 
+ 		//点击后添加一个标记，并弹出提示窗口显示当前位置的经纬度
+        google.maps.event.addListener(map, "click", function(event) {
+		  var currentLatLng = event.latLng;
+		  var content = "";
+		  placeMarker(currentLatLng, content, map);
+        });
+      }
+	  
+	  //添加标记
+	  function placeMarker(position , content , mapFlg){
+	  	var marker = new google.maps.Marker({
+			position: position,	//显示位置
+			map: mapFlg,			//所属地图
+			draggable: true 	//可以拖拽			
+		});
+		mapFlg.panTo(position); //将地图中心移动到指定位置
+
+        infoWin.setContent(content);
+//        infoWin.setPosition(position);
+        infoWin.open(mapFlg,marker);
+
+		//添加标记的dblclick事件的监听，双击即可关闭。
+		google.maps.event.addListener(marker, "dblclick", function(){
+			marker.setVisible(false);
+			infoWin.close();
+		});
+		
+		//添加标记的click事件的监听，单击显示信息窗口，显示当前位置的经纬度。
+		google.maps.event.addListener(marker, "click", function(){
+			infoWin.setContent(content);
+//			infoWin.setPosition(marker.getPosition());
+			infoWin.open(mapFlg,marker);
+		});
+		
+		//添加标记的dragstart事件的监听，拖拽标记时，不显示信息窗口。
+		google.maps.event.addListener(marker, "dragstart", function(){
+			infoWin.close();
+		});
+		
+		//添加标记的dragend事件的监听，拖拽标记时，不显示信息窗口。
+		google.maps.event.addListener(marker, "dragend", function(){
+			infoWin.setContent(content);
+//			infoWin.setPosition(marker.getPosition());
+			infoWin.open(mapFlg,marker);
+		});
+		
+		//添加标记到标记的数组
+		markerArray.push(marker);
+		
+	  }
+	  
+      google.maps.event.addDomListener(window, "load", initialize);
+	  
+	  //查询地点的经纬度
+	  function getLatLng(){
+	  	delMarkerArray();	//先清空所有标记
+	  	var addr = $("location").value;
+		if(addr == ""){
+			alert("地址不能为空！");
+			return;
+		}
+	  	if(!geocoder){
+			geocoder = new google.maps.Geocoder();
+		}
+		geocoder.geocode({"address": addr,"bounds": bounds},function(results,status){
+			if(status == google.maps.GeocoderStatus.OK){
+				var loc;
+				var content;
+				for( i in results){
+					loc = results[i].geometry.location;
+					content = results[i].formatted_address
+//					map.setCenter(loc);
+					placeMarker(loc, content, map);
+				}
+			} else {
+        		alert("Geocode was not successful for the following reason: " + status);
+      		}
+		});
+	  }
+	  
+	  //删除所有标记
+	  function delMarkerArray(){
+	  	if(markerArray){
+			for(i in markerArray){
+				markerArray[i].setMap(null);
+			}
+		}
+	  }
+	  
+	  //获取地名
+	  function getLocation(){
+	  	//绘制弹出窗口的内容
+		var popStr = "";
+		popStr += "<div id='locationDiv'>";
+		popStr += "请输入活动地点：";
+		popStr += "<input type='text' name='locTmp' id='locTmp' />";
+		popStr += "<input type='button' name='searchBtn' onclick='searchPopMap();' value='查询' />";
+		popStr += "</div>";
+		popStr += "<div id='mapDiv'>";
+		popStr += "<table border='0' cellpadding='0' cellspacing='0' width='100%' height='100%'>";
+		popStr += "<tr>";
+		popStr += "<td width='70%'>";
+		popStr += "<div id='popMapDiv'></div>";
+		popStr += "</td>";
+		popStr += "<td width='30%'>";
+		popStr += "<div id='locResult'></div>";
+		popStr += "</td>";
+		popStr += "</tr>";
+		popStr += "</table>";
+		popStr += "</div>";
+		
+	  	//显示浮动窗口
+		draw_pop("选择活动地址",popStr,800,500,true);
+		open_pop();
+		
+		//初始化地图,将父窗体中的地图复制到子窗体中
+		initPopMap();
+		
+	  }
+	  
+	  //初始化弹出的地图
+	  function initPopMap(){
+	  	// 默认位置的经纬度
+        var centerLatLng = new google.maps.LatLng(39.962797,116.358111);//北邮
+//		geocoder = new google.maps.Geocoder();
+        var myOptions = {
+          zoom: 14,
+          center: centerLatLng,
+          disableDefaultUI: true,	//	禁用默认控件
+		  mapTypeId: google.maps.MapTypeId.ROADMAP	//只显示默认的地图界面
+        };
+ 
+        popMap = new google.maps.Map($("popMapDiv"),myOptions);
+			
+//		bounds = map.getBounds();	//获得初始地图的viewport
+ 
+ 		//点击后添加一个标记，并弹出提示窗口显示当前位置的经纬度
+//        google.maps.event.addListener(mapT, "click", function(event) {
+//		  var currentLatLng = event.latLng;
+//		  var content = "";
+//		  placeMarker(currentLatLng, content, mapT);
+//        });	  
+	  }
+	  
+	  //搜索地址
+	  function searchPopMap(){
+	  	delMarkerArray();	//先清空所有标记
+		$("locResult").innerHTML = "";	//清空上次搜索结果
+	  	var addr = $("locTmp").value;
+		if(addr == ""){
+			alert("地址不能为空！");
+			return;
+		}
+	  	if(!geocoder){
+			geocoder = new google.maps.Geocoder();
+		}
+		geocoder.geocode({"address": addr,"bounds": bounds},function(results,status){
+			if(status == google.maps.GeocoderStatus.OK){
+				var loc;	// 结果的经纬度
+				var addr;	//地点的地址
+				var locName;	//地点名称
+				var marker;	//地点标记
+				var retStr = "";
+				//编辑搜索结果
+				for( i in results){
+					loc = results[i].geometry.location;
+					locName = results[i].address_components[0].long_name;
+					addr = results[i].formatted_address;
+					marker = placeMarker(loc, locName, popMap);
+//					map.setCenter(loc);
+					retStr = "<div style='padding-top: 10px;margin-left:10px;' onmouseover='showLocation(this, popMap, ";
+					retStr += loc.lat() + "," + loc.lng() + ",\"" + locName + "\");' onmouseout='resetStyle(this);'>地点：" + locName;
+//					retStr = "<div onmouseover='javascript: popMap.setCenter(" + loc + ");'>地点：" + locName;
+					retStr += "<br />地址：" + addr + "</div>";
+					$("locResult").innerHTML += retStr;
+				}
+			} else {
+        		alert("Geocode was not successful for the following reason: " + status);
+      		}
+		});
+	  }
+	  
+	  //根据LatLng数据在地图上显示地点
+	  function showLocation(obj,mapCav,lat,lng,locName){
+	  	obj.className = "highLightRet";
+	  	var loc = new google.maps.LatLng(lat,lng);
+	  	mapCav.setCenter(loc);
+		infoWin.setContent(locName);
+		infoWin.setPosition(loc);
+		infoWin.open(mapCav);
+	  }
+	  
+	  //重置div样式
+	  function resetStyle(obj){
+	  	obj.className = "normalRet";
+	  }
+</script>
+
+</head>
+
+<body>
+<div id="map_canvas" style="width:400px; height: 400px"></div>
+地名：<input type="text" name="location" id="location" onclick="getLocation();"/><input type="button" onclick="getLatLng()" name="next" value="获取经纬度" /><br />
+纬度：<input type="text" name="lat" id="lat" /><br />
+经度：<input type="text" name="lng" id="lng" />
+</body>
+</html>

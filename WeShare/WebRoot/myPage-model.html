@@ -1,0 +1,661 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WeShare</title>
+<script type="text/javascript" language="javascript1.2">
+function $(id){
+	return document.getElementById(id);
+}
+
+function joinCntOnMouseOver(){
+	$("joinCnt").style.textDecoration = "underline";
+}
+
+function joinCntOnMouseOut(){
+	$("joinCnt").style.textDecoration = "none";
+}
+
+function onSearch(){
+	if(($("searchKey").value == null) || 
+		($("searchKey").value == "") || 
+		($("searchType").value == null) ||
+		($("searchType").value == "")){
+		return false;
+	}
+	return true;
+}
+
+</script>
+<style type="text/css">
+body {
+	text-align: center;
+	font-family: "微软雅黑", "宋体", "楷体", "华文楷体", "华文宋体";
+}
+.body {
+	width: 80%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.head {
+	width: 100%;
+	text-align: left;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+.ads {
+	height: 80px;
+	vertical-align: middle;
+	text-align: left;
+	font-size: 18px;
+	border: #000000 1px groove;
+}
+ul {
+	display: inline;
+	font-size: 16px;
+	background-image: url(Images/bg_navg.jpg);
+}
+li {
+	display: inline;
+}
+li.cur {
+	font-weight: bold;
+}
+li.line {
+	color: #743D3B;
+}
+.sign {
+	text-align: left;
+	font-size: 16px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.activeSubmit {
+	text-align: left;
+	border: #000000 1px double;
+	margin-left: 0;
+}
+.search {
+	display: inline;
+	margin-left: 100px;
+	margin-right: 20px;
+}
+.currentActive {
+	text-align: left;
+	border: #000000 1px double;
+}
+.currentActiveText, .currentActiveDetail {
+	font-size: 18px;
+}
+.currentActiveInfo {
+	font-size: 12px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.currentActiveJoinCnt {
+	color: #FF0000;
+	cursor: pointer;
+}
+.tip {
+	font-size: 12px;
+	color: #666666;
+	padding-left: 10px;
+}
+.activeType {
+	margin-left: 0;
+}
+.currentActiveAll {
+	margin: 10px;
+}
+.addActiveDiv {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	border: #000000 1px double;
+}
+.activeDetail {
+	overflow: hidden;
+}
+.activeTools {
+	margin-top: 0px;
+}
+.activeTools ul {
+	font-size: 14px;
+	border: #000000 1px double;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-left: 10px;
+	display: inline;
+	float: left;
+}
+.submitBtn {
+	float: left;
+	display: inline;
+	margin-left: 80px;
+}
+.spanLink {
+	cursor: pointer;
+}
+.fLDiv input {
+	border: 0;
+	border-bottom: #000000 1px double;
+}
+.favLocationTip {
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 10px;
+	text-align: left;
+	font-size: 12px;
+}
+.favLocationHelp {
+	text-align: right;
+	font-weight: bold;
+	color: #0000FF;
+	font-size: 15px;
+}
+.activeList {
+	margin-top: 10px;
+	border: #000000 1px double;
+}
+.activeCatalog {
+	text-align: left;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 30px;
+	width: 60%;
+	border-bottom: #000000 1px double;
+	float: left;
+}
+.catalogDetail {
+	text-align: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	float: left;
+}
+.catalogDetail2 {
+	text-align: right;
+	margin-top: 10px;
+}
+.catalogDetail .spanLink, .catalogDetail2 .spanLink {
+	border: #000000 1px double;
+	padding: 1px;
+}
+.flash {
+	font-size: 14px;
+	color: #0000FF;
+	margin-left: 50px;
+	margin-right: 20px;
+	display: inline;
+	font-weight: bold;
+}
+.searchForm {
+	display: inline;
+}
+.typeBtn {
+	margin-left: 20px;
+	margin-top: 0;
+}
+.typeBtn span {
+	border: #000000 1px double;
+}
+.map {
+	height: 400px;
+	width: 400px;
+	border: #000000 1px double;
+}
+.searchActive {
+	padding-top: 5px;
+}
+.newActive {
+	margin-top: 20px;
+}
+.oneActive {
+	border-bottom: #000000 1px double;
+	text-align: left;
+	margin-left: 20px;
+}
+.submitMethod {
+	margin-left: 10px;
+	margin-right: 15px;
+}
+.submitTime, .submitMethod {
+	font-size: 12px;
+}
+.activeAction {
+	margin-right: 10px;
+	font-size: 15px;
+}
+.pageDiv {
+	text-align: right;
+	padding-right: 20px;
+	font-size: 14px;
+}
+.currentPage {
+	margin-left: 7px;
+	margin-right: 7px;
+}
+.addNewActive {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: #000000 1px double;
+}
+.hotActive, .interestAvtive, .knownPerson,.advise,.expose,.favLocation {
+	border: #000000 1px double;
+	margin-top: 10px;
+	text-align: left;
+	padding-bottom: 10px;
+}
+.hotTitle, .interestTitle, .knownTitle,.adviseTitle,.exposeTitle,.favTitle {
+	border-bottom: #000000 1px double;
+	margin: 5px 10px;
+}
+.hotActiveDate {
+	margin-left: 15px;
+	margin-top: 5px;
+	margin-right: 15px;
+	font-size: 15px;
+	border-bottom: #000000 1px dashed;
+}
+.hotActiveDetail, .interestAvtiveDetail, .knownPersonDetail,.adviseDetail,.exposeDetail {
+	margin-left: 20px;
+	font-size: 15px;
+}
+.fLDiv{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.copyRight{
+	margin-top: 20px;
+	text-align: center;
+	border-top: #9999CC 1px dashed;
+	padding-top: 5px;
+	font-size: 12px;
+}
+
+.publicArea{
+	font-size: 12px;
+}
+</style>
+</head>
+<body>
+<div class="body">
+  <!--头部导航-->
+  <div class="head"> <img border="0" src="Images/icon.jpg" />
+    <ul>
+      <li class="cur"><a href="###">首页</a></li>
+      <li class="line">|</li>
+      <li><a href="###">我的主页</a></li>
+      <li class="line">|</li>
+      <li><a href="###">晒友</a></li>
+      <li class="line">|</li>
+      <li><a href="###">地盘</a></li>
+    </ul>
+    <div class="search">
+      <form name="searchForm" class="searchForm" action="###" target="_self" method="post" title="搜索" onsubmit="return onSearch();">
+        <select name="searchType" id="searchType">
+          <option value="1" selected="selected">贴士</option>
+          <option value="2" >地盘</option>
+          <option value="3" >晒友</option>
+        </select>
+        <input type="text" name="searchKey" id="searchKey"  />
+        <input type="submit" name="goSearch" value="Go" />
+      </form>
+    </div>
+    <span><a href="###" target="_self">我的账号</a></span> </div>
+  <table>
+    <tr valign="top">
+      <!--左侧内容-->
+      <td width="70%"><!--当前活动-->
+        <div class="currentActive">
+          <table border="0" bordercolor="#000000" cellpadding="2" cellspacing="0">
+            <tr>
+              <td><img border="0" src="Images/ppleft.jpg" /></td>
+              <td><div class="currentActiveAll"> <span class="currentActiveText">【出游】【2011-07-08】【布达拉宫】</span><br />
+                  <span class="currentActiveDetail">＂详细信息，西藏之行＂。</span><br />
+                  <span class="currentActiveInfo">已有<span id="joinCnt" class="currentActiveJoinCnt" onmouseover="joinCntOnMouseOver()" onclick="getJoinCntList()" onmouseout="joinCntOnMouseOut()">100人</span>参加</span>
+                  <button name="finishJoin">结束报名</button>
+                  </div></td>
+            </tr>
+          </table>
+        </div>
+        <!--发布活动-->
+        <div class="addActiveDiv">
+          <div class="typeBtn"> <span class="spanLink">晒活动</span> <span class="spanLink">晒语录</span> </div>
+          <div class="sign">宣传语部分：今天，你晒了吗</div>
+          <!--发布新活动-->
+          <div class="addNewActive">
+            <form action="###" onsubmit="return false;" target="_self" name="addActiveForm" id="addActiveForm" method="post" title="晒活动">
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>类别：</td>
+                  <td><ul class="activeType">
+                      <li class="spanLink">吃喝</li>
+                      <li class="line">|</li>
+                      <li><span class="spanLink">玩乐</span></li>
+                      <li class="line">|</li>
+                      <li><span class="spanLink">出游</span></li>
+                      <li class="line">|</li>
+                      <li><span class="spanLink">运动</span></li>
+                      <li class="line">|</li>
+                      <li><span class="spanLink">购物</span></li>
+                      <li class="line">|</li>
+                      <li><span class="spanLink">学习</span></li>
+                      <li class="line">|</li>
+                      <li><span class="spanLink">合租</span></li>
+                      <li class="line">|</li>
+                      <li><span class="spanLink">沙龙</span></li>
+                      <li class="line">|</li>
+                      <li><span class="spanLink">更多</span></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>时间：</td>
+                  <td><input type="text" name="activeTime" maxlength="10" size="10" />
+                    <span class="tip">(选择活动时间吧~)</span> </td>
+                </tr>
+                <tr>
+                  <td>地点：</td>
+                  <td><input type="text" name="activeLocation" maxlength="50" size="48" />
+                    <span class="tip">(去哪儿呢~)</span> </td>
+                </tr>
+                <tr>
+                  <td valign="top">详细：</td>
+                  <td><textarea name="activeDetail" class="activeDetail" cols="40" rows="4"></textarea>
+                    <div class="activeTools">
+<!--                      <ul>
+                        <li><span class="spanLink">表情</span></li>
+                        <li><span class="spanLink">图片</span></li>
+                        <li><span class="spanLink">视频</span></li>
+                        <li><span class="spanLink">音乐</span></li>
+                      </ul>
+                      
+-->
+					  <span class="publicArea"><input name="publicArea" type="checkbox" value="1" checked />对所有公开</span>
+                      <div class="submitBtn">
+                        <button name="submitActive">晒一晒<br />
+                        不缺钙</button>
+                      </div>
+                    </div></td>
+                </tr>
+              </table>
+            </form>
+          </div>
+        </div>
+        <!--广告部分-->
+        <div class="ads">这里是广告，每天代码一百行，和谐生活奔小康</div>
+        <!--最新活动-->
+        <div class="activeList">
+          <div class="activeCatalog"> <span>新鲜事</span> </div>
+          <div class="searchActive">
+            <input type="text" name="searchActiveKey" id="searchActiveKey" value="请输入搜索主题" />
+            <button name="searchActiveBtn">Go</button>
+          </div>
+          <div class="catalogDetail"> <span class="spanLink">我的地盘</span> <span class="spanLink">所有地盘</span> <span class="spanLink">我的晒友</span> </div>
+          <div class="catalogDetail2"> <span class="spanLink">我的活动</span> <span class="spanLink">我的围观</span>
+            <div class="flash">刷新</div>
+          </div>
+          <!--活动列表-->
+          <div class="newActive">
+            <div class="oneActive">
+              <table>
+                <tr>
+                  <td align="center" valign="top"><a href="###" target="_self"><img src="Images/ppleft.jpg" border="0" /></a><br />
+                    <a href="###" target="_self">Joyce</a><br />
+                    <a href="###" target="_self">北京邮电大学</a><br />
+                  </td>
+                  <td><table>
+                      <tr>
+                        <td align="right"> 类别： </td>
+                        <td align="left"> 吃喝 </td>
+                      </tr>
+                      <tr>
+                        <td align="right"> 时间： </td>
+                        <td align="left"> 7月13日 19:00~21:00 </td>
+                      </tr>
+                      <tr>
+                        <td align="right"> 地点： </td>
+                        <td align="left"> 海底捞 </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td align="left"> 征PPMM两名，我请客，本人男，烟酒僧二年，工科。 </td>
+                      </tr>
+                      <tr>
+                        <td align="center" colspan="2"><span class="submitTime">3分钟前</span> <span class="submitMethod">来自WeShare</span> <span class="activeAction"><a href="javascript:join();">参与(10)</a> | <a href="javascript:view();">围观(15)</a> | <a href="javascript:forward();">转发(5)</a> | <a href="javascript:comment();">评论(50)</a></span> </td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table>
+            </div>
+            <div class="oneActive">
+              <table>
+                <tr>
+                  <td align="center" valign="top"><a href="###" target="_self"><img src="Images/ppleft.jpg" border="0" /></a><br />
+                    <a href="###" target="_self">Joyce</a><br />
+                    <a href="###" target="_self">北京邮电大学</a><br />
+                  </td>
+                  <td><table>
+                      <tr>
+                        <td align="right"> 类别： </td>
+                        <td align="left"> 吃喝 </td>
+                      </tr>
+                      <tr>
+                        <td align="right"> 时间： </td>
+                        <td align="left"> 7月13日 19:00~21:00 </td>
+                      </tr>
+                      <tr>
+                        <td align="right"> 地点： </td>
+                        <td align="left"> 海底捞 </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td align="left"> 征PPMM两名，我请客，本人男，烟酒僧二年，工科。 </td>
+                      </tr>
+                      <tr>
+                        <td align="center" colspan="2"><span class="submitTime">3分钟前</span> <span class="submitMethod">来自WeShare</span> <span class="activeAction"><a href="javascript:join();">参与(10)</a> | <a href="javascript:view();">围观(15)</a> | <a href="javascript:forward();">转发(5)</a> | <a href="javascript:comment();">评论(50)</a></span> </td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table>
+            </div>
+            <div class="oneActive">
+              <table>
+                <tr>
+                  <td align="center" valign="top"><a href="###" target="_self"><img src="Images/ppleft.jpg" border="0" /></a><br />
+                    <a href="###" target="_self">Joyce</a><br />
+                    <a href="###" target="_self">北京邮电大学</a><br />
+                  </td>
+                  <td><table>
+                      <tr>
+                        <td align="right"> 类别： </td>
+                        <td align="left"> 吃喝 </td>
+                      </tr>
+                      <tr>
+                        <td align="right"> 时间： </td>
+                        <td align="left"> 7月13日 19:00~21:00 </td>
+                      </tr>
+                      <tr>
+                        <td align="right"> 地点： </td>
+                        <td align="left"> 海底捞 </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td align="left"> 征PPMM两名，我请客，本人男，烟酒僧二年，工科。 </td>
+                      </tr>
+                      <tr>
+                        <td align="center" colspan="2"><span class="submitTime">3分钟前</span> <span class="submitMethod">来自WeShare</span> <span class="activeAction"><a href="javascript:join();">参与(10)</a> | <a href="javascript:view();">围观(15)</a> | <a href="javascript:forward();">转发(5)</a> | <a href="javascript:comment();">评论(50)</a></span> </td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table>
+            </div>
+            <div class="oneActive">
+              <table>
+                <tr>
+                  <td align="center" valign="top"><a href="###" target="_self"><img src="Images/ppleft.jpg" border="0" /></a><br />
+                    <a href="###" target="_self">Joyce</a><br />
+                    <a href="###" target="_self">北京邮电大学</a><br />
+                  </td>
+                  <td><table>
+                      <tr>
+                        <td align="right"> 类别： </td>
+                        <td align="left"> 吃喝 </td>
+                      </tr>
+                      <tr>
+                        <td align="right"> 时间： </td>
+                        <td align="left"> 7月13日 19:00~21:00 </td>
+                      </tr>
+                      <tr>
+                        <td align="right"> 地点： </td>
+                        <td align="left"> 海底捞 </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td align="left"> 征PPMM两名，我请客，本人男，烟酒僧二年，工科。 </td>
+                      </tr>
+                      <tr>
+                        <td align="center" colspan="2"><span class="submitTime">3分钟前</span> <span class="submitMethod">来自WeShare</span> <span class="activeAction"><a href="javascript:join();">参与(10)</a> | <a href="javascript:view();">围观(15)</a> | <a href="javascript:forward();">转发(5)</a> | <a href="javascript:comment();">评论(50)</a></span> </td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table>
+            </div>
+            <div class="oneActive">
+              <table>
+                <tr>
+                  <td align="center" valign="top"><a href="###" target="_self"><img src="Images/ppleft.jpg" border="0" /></a><br />
+                    <a href="###" target="_self">Joyce</a><br />
+                    <a href="###" target="_self">北京邮电大学</a><br />
+                  </td>
+                  <td><table>
+                      <tr>
+                        <td align="right"> 类别： </td>
+                        <td align="left"> 吃喝 </td>
+                      </tr>
+                      <tr>
+                        <td align="right"> 时间： </td>
+                        <td align="left"> 7月13日 19:00~21:00 </td>
+                      </tr>
+                      <tr>
+                        <td align="right"> 地点： </td>
+                        <td align="left"> 海底捞 </td>
+                      </tr>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td align="left"> 征PPMM两名，我请客，本人男，烟酒僧二年，工科。 </td>
+                      </tr>
+                      <tr>
+                        <td align="center" colspan="2"><span class="submitTime">3分钟前</span> <span class="submitMethod">来自WeShare</span> <span class="activeAction"><a href="javascript:join();">参与(10)</a> | <a href="javascript:view();">围观(15)</a> | <a href="javascript:forward();">转发(5)</a> | <a href="javascript:comment();">评论(50)</a></span> </td>
+                      </tr>
+                    </table></td>
+                </tr>
+              </table>
+            </div>
+            <div class="pageDiv"> <span class="spanLink">上一页</span> <span class="currentPage">第2页</span> <span class="spanLink">下一页</span> </div>
+          </div>
+        </div></td>
+      <!--右侧内容-->
+      <td valign="top"><!--地图-->
+        <div class="map">此处显示地图</div>
+        <!--现在最想去的地方-->
+        <div class="favLocation">
+        <div class="favTitle">晒一晒现在最想去哪里？</div>
+        <div class="fLDiv">请输入您想去的地点：
+          <input type="text" size="25" name="favLocation" id="favLocation" />
+        </div>
+        <div class="favLocationTip">填写现在最想去的地方，当其他人也想去这里，或者发起了去这里的活动，您可以最先被通知哦^_^～</div>
+        <div class="favLocationHelp"><span class="spanLink">如何晒活动？</span></div>
+        </div>
+        <!--热门活动-->
+        <div class="hotActive">
+          <!--热门标题-->
+          <div class="hotTitle">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td align="left">热门活动</td>
+                <td align="right" style="font-size: 14px;"><span class="spanLink">更多&gt;&gt;</span></td>
+              </tr>
+            </table>
+          </div>
+          <!--活动日期-->
+          <div class="hotActiveDate">7月14日</div>
+          <!--热门活动-->
+          <div class="hotActiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+          <div class="hotActiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+          <div class="hotActiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+          <!--活动日期-->
+          <div class="hotActiveDate">7月13日</div>
+          <!--热门活动-->
+          <div class="hotActiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+          <div class="hotActiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+          <div class="hotActiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+        </div>
+        <!--可能感兴趣的活动-->
+        <div class="interestAvtive">
+          <div class="interestTitle">可能感兴趣的活动</div>
+          <div class="interestAvtiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+          <div class="interestAvtiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+          <div class="interestAvtiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+          <div class="interestAvtiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+          <div class="interestAvtiveDetail"> 【吃喝】<a href="###" target="_self">海底捞(征PPMM两名，我...)</a> </div>
+        </div>
+        <!--可能认识的人-->
+        <div class="knownPerson">
+          <div class="knownTitle">可能认识的晒友</div>
+          <table class="knownPersonDetail">
+            <tr>
+              <td><table>
+                  <tr>
+                    <td rowspan="2"><a href="###" target="_self"><img src="Images/ppleft.jpg" border="0" /></a> </td>
+                    <td><a href="###" target="_self">微尘小粒</a></td>
+                  </tr>
+                  <tr>
+                    <td><button name="addFriend">+加晒友</button></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">我们有5个共同好友</td>
+                  </tr>
+                </table></td>
+              <td><table>
+                  <tr>
+                    <td rowspan="2"><a href="###" target="_self"><img src="Images/ppleft.jpg" border="0" /></a> </td>
+                    <td><a href="###" target="_self">微尘小粒</a></td>
+                  </tr>
+                  <tr>
+                    <td><button name="addFriend">+加晒友</button></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">我们有5个共同好友</td>
+                  </tr>
+                </table></td>
+            </tr>
+          </table>
+        </div>
+        <!--意见反馈-->
+        <div class="advise">
+          <div class="adviseTitle">意见反馈</div>
+          <div class="adviseDetail"><a href="###" target="_self">点击这里</a>提交您的意见，我们将在第一时间处理您的意见和建议。感谢您的参与！</div>
+        </div>
+        <!--举报恶意信息-->
+        <div class="expose">
+          <div class="exposeTitle">举报恶意信息</div>
+          <div class="exposeDetail"><a href="###" target="_self">点击这里</a>提交您举报的恶意信息，我们将在第一时间处理您的举报信息。感谢您的参与！</div>
+        </div>
+        
+        </td>
+    </tr>
+  </table>
+  <!--版权信息-->
+  <div class="copyRight">
+  &copy;2011&nbsp;WeShare
+  </div>
+</div>
+</body>
+</html>
